@@ -1,0 +1,7 @@
+{
+  "name": "shleep-sleep-companion",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shleep — a calm, personalized sleep companion",
+  "scripts": { "start": "npx serve .", "dev": "npx serve ." }
+}
