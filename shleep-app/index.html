@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B1F4B" />
+  <meta name="description" content="Shleep — a calm, personalized companion for building a consistent sleep routine." />
+  <title>Shleep — Your softer way to sleep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="boot" class="boot" aria-label="Shleep loading">
+    <div class="boot-image-wrap"><img src="assets/one-two-sleep.jpeg" alt="One-Two-Sleep supplied brand image" /></div>
+    <div class="boot-progress"><span></span></div>
+  </div>
+  <div class="app-shell" id="appShell" hidden>
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="Shleep home"><img src="assets/shleep-logo.jpeg" alt="Shleep logo"></a>
+      <div class="side-caption">YOUR NIGHT, YOUR RHYTHM</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-page="home"><span class="nav-icon">⌂</span><span>Home</span></button>
+        <button class="nav-item" data-page="plan"><span class="nav-icon">◷</span><span>My Plan</span></button>
+        <button class="nav-item" data-page="dreamscape"><span class="nav-icon">✧</span><span>Dreamscape</span></button>
+        <button class="nav-item" data-page="story"><span class="nav-icon">▥</span><span>Weekly Story</span></button>
+        <button class="nav-item" data-page="profile"><span class="nav-icon">◎</span><span>Profile</span></button>
+      </nav>
+      <div class="sidebar-bottom"><div class="tiny-moon">☾</div><p>A little more rest.<br><em>A little more you.</em></p><span class="version">SHLEEP · PERSONAL SLEEP SPACE</span></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div><div class="eyebrow" id="dateLabel">YOUR PERSONAL SLEEP SPACE</div><div class="top-title" id="topTitle">A softer start to your day.</div></div><div class="top-actions"><span class="local-pill"><i></i> Saved on this device</span><button class="avatar" id="avatarBtn" aria-label="Open profile">S</button></div></header>
+      <div class="page-wrap">
+        <section class="page active" id="page-home">
+          <div class="hero-panel">
+            <div class="hero-copy"><div class="eyebrow cream-eyebrow">A NEW DAY, AT YOUR OWN PACE</div><h1 id="greeting">Good evening<span>.</span></h1><p id="heroSub">Rest is not a reward. It's part of the journey.</p><div class="hero-actions"><button class="btn btn-cream" data-action="log">Log last night's sleep <span>↗</span></button><button class="btn btn-ghost" data-action="winddown">Begin wind-down</button></div></div>
+            <div class="moon-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="moon"></div><span class="star star-a">✦</span><span class="star star-b">✧</span><span class="star star-c">·</span><span class="star star-d">✦</span><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div></div>
+            <div class="hero-foot"><span>YOUR NIGHTLY COMPANION</span><span>PROGRESS, NOT PERFECTION</span></div>
+          </div>
+          <div class="section-heading"><div><div class="eyebrow">YOUR SLEEP AT A GLANCE</div><h2>A little look back.</h2></div><button class="text-link" data-page="story">View weekly story <span>→</span></button></div>
+          <div class="stats-grid" id="statsGrid">
+            <article class="stat-card stat-feature"><div class="stat-top"><span>Last night's rest</span><span class="stat-symbol">◒</span></div><div class="stat-value" id="lastSleep">—<small> hrs</small></div><div class="stat-note" id="lastSleepNote">Your first sleep entry is waiting.</div><div class="stat-track"><span id="lastSleepBar"></span></div></article>
+            <article class="stat-card"><div class="stat-top"><span>Weekly average</span><span class="stat-symbol">⌁</span></div><div class="stat-value" id="weeklyAvg">—<small> hrs</small></div><div class="stat-note">Based on your recent entries</div></article>
+            <article class="stat-card"><div class="stat-top"><span>Goal nights</span><span class="stat-symbol">✧</span></div><div class="stat-value" id="goalNights">0<small> / 7</small></div><div class="stat-note">Nights that met your target</div></article>
+            <article class="stat-card"><div class="stat-top"><span>Gentle consistency</span><span class="stat-symbol">◌</span></div><div class="stat-value" id="consistency">—<small>%</small></div><div class="stat-note">A guide, never a grade</div></article>
+          </div>
+          <div class="home-lower">
+            <article class="surface tonight-card"><div class="surface-head"><div><div class="eyebrow">A PLAN THAT FITS REAL LIFE</div><h3>Tonight, gently.</h3></div><span class="moon-chip">☾ TONIGHT</span></div><div class="tonight-time"><div><span>Suggested bedtime</span><strong id="tonightBed">11:00 <small>PM</small></strong></div><div class="time-divider"></div><div><span>Wake-up target</span><strong id="tonightWake">7:00 <small>AM</small></strong></div></div><p class="reason" id="tonightReason">Set your preferred wake-up time in My Plan to shape a routine that works for you.</p><button class="text-link" data-page="plan">Explore your plan <span>→</span></button></article>
+            <article class="surface quick-card"><div class="surface-head"><div><div class="eyebrow">SMALL THINGS ADD UP</div><h3>Your next step.</h3></div><span class="step-count">01 / 03</span></div><div class="quick-list"><button class="quick-row" data-action="log"><span class="quick-icon">＋</span><span><b>Record your sleep</b><small>Give your week a little more context</small></span><span class="row-arrow">↗</span></button><button class="quick-row" data-action="winddown"><span class="quick-icon">☾</span><span><b>Make room to unwind</b><small>A small ritual before bed</small></span><span class="row-arrow">↗</span></button><button class="quick-row" data-page="profile"><span class="quick-icon">⌁</span><span><b>Know your habits</b><small>Notice what helps you rest</small></span><span class="row-arrow">↗</span></button></div></article>
+          </div>
+          <div class="section-heading compact"><div><div class="eyebrow">YOUR RECENT NIGHTS</div><h2>Sleep journal.</h2></div><button class="text-link" data-action="log">+ Add entry</button></div>
+          <div class="surface journal-surface"><div id="recentEntries" class="entry-list"><div class="empty-inline"><span class="empty-moon">☾</span><div><b>Your story starts here.</b><p>Add a sleep entry to see your nights take shape.</p></div></div></div></div>
+        </section>
+        <section class="page" id="page-plan">
+          <div class="page-intro"><div class="eyebrow">A ROUTINE THAT RESPECTS YOUR REAL LIFE</div><h1>My Plan<span>.</span></h1><p>Your sleep plan should fit around your life, not the other way around.</p></div>
+          <div class="plan-grid"><article class="surface plan-main"><div class="surface-head"><div><div class="eyebrow">YOUR ADAPTIVE SLEEP ROUTE</div><h3>Find your rhythm.</h3></div><span class="route-badge">PERSONAL ROUTE</span></div><div class="route-display"><div class="route-node"><span class="node-icon">☾</span><span>BEDTIME</span><strong id="planBed">11:00 PM</strong></div><div class="route-line"><span></span><small id="planDuration">8 hours of rest</small></div><div class="route-node"><span class="node-icon">☼</span><span>WAKE UP</span><strong id="planWake">7:00 AM</strong></div></div><div class="plan-explain" id="adaptiveExplanation">Your plan will become more personal as you add sleep records.</div><div class="adjustment" id="adjustmentBox"><div><b>Your next gentle adjustment</b><p>Start with a consistent wake-up time. Small steps are easier to keep.</p></div><span>15 min</span></div></article>
+          <article class="surface settings-card"><div class="eyebrow">YOUR TARGET</div><h3>Shape your schedule.</h3><form id="planForm" class="form-stack"><label>Preferred wake-up time<input type="time" id="wakeTime" value="07:00" required></label><label>Desired sleep duration<select id="sleepTarget"><option value="7">7 hours</option><option value="7.5">7.5 hours</option><option value="8" selected>8 hours</option><option value="8.5">8.5 hours</option><option value="9">9 hours</option></select></label><label>Weekend wake-up time<input type="time" id="weekendWake" value="08:00"></label><button class="btn btn-primary" type="submit">Save my plan <span>→</span></button></form></article></div>
+          <div class="section-heading"><div><div class="eyebrow">YOUR REAL-LIFE SCHEDULE</div><h2>Make space for rest.</h2></div><button class="text-link" data-action="addCommitment">+ Add commitment</button></div>
+          <div class="surface schedule-surface"><div class="schedule-intro"><div><b>Your weekly commitments</b><p>Classes, work, exams, and everything in between.</p></div><span class="schedule-tag">WEEKLY VIEW</span></div><div id="commitmentList" class="commitment-list"><div class="empty-inline"><span class="empty-moon">⌁</span><div><b>Your schedule, your way.</b><p>Add a commitment so your sleep plan can respect your day.</p></div></div></div></div>
+          <div class="section-heading"><div><div class="eyebrow">WHEN THE NIGHT DOESN'T GO TO PLAN</div><h2>Recovery, without guilt.</h2></div></div>
+          <div class="recovery-panel"><div class="recovery-orb">☾</div><div><div class="eyebrow cream-eyebrow">NO-GUILT RECOVERY MODE</div><h3>One late night doesn't erase your progress.</h3><p id="recoveryText">If last night was shorter than planned, we'll help you find the next realistic step. No streak resets. No guilt.</p><button class="btn btn-cream" id="recoveryBtn">Build a gentle recovery plan <span>→</span></button></div></div>
+        </section>
+        <section class="page" id="page-dreamscape">
+          <div class="page-intro"><div class="eyebrow">SMALL STEPS BECOME SOMETHING BEAUTIFUL</div><h1>Your Dreamscape<span>.</span></h1><p>A little constellation of the nights you've shown up for yourself.</p></div>
+          <div class="dreamscape-panel"><div class="dreamscape-sky"><div class="sky-moon"></div><span class="sky-star s1">✦</span><span class="sky-star s2">✧</span><span class="sky-star s3">·</span><span class="sky-star s4">✦</span><span class="sky-star s5">✧</span><div class="dream-hills"></div><div class="dream-caption"><span>YOUR NIGHT SKY</span><strong id="dreamStage">A quiet beginning</strong><small id="dreamSub">Every kind choice adds a little light.</small></div></div><div class="dream-progress"><div><span>YOUR STARS</span><strong id="starCount">0</strong></div><div class="progress-track"><span id="starProgress"></span></div><div class="progress-labels"><span>First light</span><span>Dreamscape grows</span></div></div></div>
+          <div class="section-heading"><div><div class="eyebrow">MILESTONES, NOT PRESSURE</div><h2>Your little achievements.</h2></div></div><div class="achievement-grid" id="achievementGrid"></div>
+          <div class="gentle-note"><span>✧</span><p>Rest is personal. Your Dreamscape celebrates the effort you make, not perfection. Missed nights never take your stars away.</p></div>
+        </section>
+        <section class="page" id="page-story">
+          <div class="page-intro story-intro"><div><div class="eyebrow">A WEEK IN YOUR OWN WORDS</div><h1>Your Weekly Story<span>.</span></h1><p>Patterns are just information. Use them to find what feels better.</p></div><div class="week-switch"><button id="prevWeek" aria-label="Previous week">←</button><span id="weekLabel">THIS WEEK</span><button id="nextWeek" aria-label="Next week">→</button></div></div>
+          <div class="story-summary" id="storySummary"><div><span>AVERAGE REST</span><strong id="storyAvg">—</strong></div><div><span>GOAL NIGHTS</span><strong id="storyGoals">—</strong></div><div><span>ENTRIES</span><strong id="storyEntries">0</strong></div></div>
+          <div class="surface chart-surface"><div class="surface-head"><div><div class="eyebrow">YOUR REST, THROUGH THE WEEK</div><h3>Sleep duration.</h3></div><span class="chart-legend"><i></i> Hours slept</span></div><div class="chart" id="sleepChart"><div class="chart-empty">Your weekly story will appear after you record a few nights.</div></div></div>
+          <div class="insight-grid"><article class="surface insight-card"><div class="eyebrow">A PATTERN TO NOTICE</div><h3>Bedtime rhythm</h3><strong id="bedVariance">—</strong><p id="bedInsight">Add a few sleep records to understand your bedtime pattern.</p></article><article class="surface insight-card"><div class="eyebrow">WEEKDAY VS WEEKEND</div><h3>Your different days</h3><strong id="weekendDiff">—</strong><p id="weekendInsight">We'll compare your weekday and weekend sleep as your journal grows.</p></article></div>
+          <div class="surface narrative-card"><div class="eyebrow">A NOTE FROM SHLEEP</div><h3 id="storyHeadline">Your story is still unfolding.</h3><p id="storyNarrative">A few honest entries are all it takes to begin noticing patterns. There is no perfect sleep score to chase here.</p></div>
+        </section>
+        <section class="page" id="page-profile">
+          <div class="page-intro"><div class="eyebrow">GETTING TO KNOW YOUR RHYTHM</div><h1>Your Profile<span>.</span></h1><p>Small observations can lead to more restful routines.</p></div>
+          <div class="profile-grid"><article class="surface profile-card"><div class="profile-avatar" id="profileAvatar">S</div><div class="eyebrow">YOUR PERSONAL SPACE</div><h3 id="profileName">Hello, there.</h3><p>Your Shleep space is saved on this device.</p><form id="profileForm" class="form-stack"><label>What should we call you?<input id="nameInput" type="text" maxlength="28" placeholder="Your name"></label><button class="btn btn-primary" type="submit">Save profile</button></form></article>
+          <article class="surface habits-card"><div class="surface-head"><div><div class="eyebrow">SLEEP HABIT DETECTIVE</div><h3>What gets in the way?</h3></div><span class="detective-mark">⌕</span></div><p class="muted">Choose anything that sometimes makes it harder to wind down. No judgement, just useful clues.</p><div class="habit-options" id="habitOptions"><label><input type="checkbox" value="Late-night scrolling"><span>Late-night scrolling</span></label><label><input type="checkbox" value="Stress or racing thoughts"><span>Stress or racing thoughts</span></label><label><input type="checkbox" value="Unpredictable schedule"><span>Unpredictable schedule</span></label><label><input type="checkbox" value="Caffeine late in the day"><span>Caffeine late in the day</span></label><label><input type="checkbox" value="Long or irregular naps"><span>Long or irregular naps</span></label><label><input type="checkbox" value="Difficulty waking up"><span>Difficulty waking up</span></label></div><button class="btn btn-primary" id="saveHabits">Save my observations</button><div id="habitSuggestions" class="suggestions" hidden></div></article></div>
+          <div class="section-heading"><div><div class="eyebrow">YOUR EVENING RITUAL</div><h2>Wind-down studio.</h2></div><span class="soft-label">A CALMER CLOSE</span></div>
+          <div class="surface winddown-surface"><div class="winddown-head"><div><h3>Make room to slow down.</h3><p>Choose a few small things that help you transition into rest.</p></div><div class="winddown-clock" id="winddownClock">20:00</div></div><div class="routine-list" id="routineList"></div><div class="routine-footer"><span id="routineProgress">0 of 4 completed</span><button class="text-link" id="addRoutine">+ Add your own</button></div><div class="routine-progress"><span id="routineBar"></span></div></div>
+          <div class="section-heading"><div><div class="eyebrow">YOUR DATA, YOUR CHOICE</div><h2>Take your data with you.</h2></div></div><div class="surface privacy-card"><div><b>Local-first privacy</b><p>Your sleep records and preferences are stored in this browser. They are not uploaded to a server.</p></div><div class="privacy-actions"><button class="btn btn-secondary" id="exportData">Export my data</button><button class="btn btn-danger-quiet" id="deleteData">Clear local data</button></div></div>
+        </section>
+      </div>
+      <footer class="footer"><span>SHLEEP</span><span>Designed to encourage progress, not perfection.</span><span>YOUR NIGHT, YOUR RHYTHM</span></footer>
+    </main>
+    <nav class="mobile-nav" aria-label="Mobile navigation"><button class="active" data-page="home"><span>⌂</span>Home</button><button data-page="plan"><span>◷</span>My Plan</button><button data-page="dreamscape"><span>✧</span>Dreamscape</button><button data-page="story"><span>▥</span>Story</button><button data-page="profile"><span>◎</span>Profile</button></nav>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div class="eyebrow" id="modalEyebrow">YOUR SLEEP JOURNAL</div><h2 id="modalTitle">Add a sleep entry.</h2><p id="modalDescription">A little record helps you understand your rhythm.</p><div id="modalBody"></div></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
